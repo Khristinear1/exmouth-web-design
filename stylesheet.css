@@ -1,0 +1,326 @@
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ 
+* {
+    /* The width of an element will be the size of its border box, not its content box (which is the normal default). */
+    box-sizing: border-box;
+}
+
+/* LAYOUT */
+
+body {
+    width: 60rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 20rem 40rem;
+}
+
+
+header {
+    grid-column: 1 / 3;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    text-align: center;
+}
+
+aside h2 {
+    text-align: center;
+}
+
+.title {
+text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+nav {
+    grid-column: 1 / 3;
+    padding: 0.5em 0;
+}
+
+aside {
+    grid-column: 1;
+}
+
+
+main {
+    grid-column: 2;
+    padding: 1em 2em 1em;
+}
+
+footer {
+    grid-column: 1 / 3;
+    padding: .5em 0;
+}
+
+
+/* COLOUR SCHEME & BORDERS */
+
+header {
+    background-color: #dff7fd;
+}
+
+nav ul a, footer {
+    color: 	#ffffff;
+}
+
+nav, footer {
+    background-color: #adb3ad;
+}
+
+a {
+    color: #333232;
+}
+
+a:hover, .active {
+    color: #cf3f3a;
+}
+
+aside {
+    background-color: rgb(252, 241, 227);
+}
+
+aside h2 {
+    color: #bb7b1a;
+}
+
+header {
+    color: #636363;
+
+}
+
+footer a {
+    color: white;
+}
+
+.checked {
+    color: orange;
+}
+
+.title {
+    color: #726f6f;
+}
+
+.Tarquay-today a {
+    color: #bb7b1a;
+}
+/* TYPOGRAPHY */
+
+header {
+    font-size: 2rem;
+}
+
+header h1 {
+    font-size: 1.3em;
+}
+
+nav {
+    font-size: 1.2rem;
+    padding: .30rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    padding: 1.50em;
+}
+
+.introduction {
+    padding: 1 rem;
+    font-size: 1rem}
+
+aside h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+aside h3{
+    text-align: center;
+}
+
+aside p {
+    font-style: italic;
+}
+
+.hotel p {
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.museum p {
+    font-style: italic;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.testimonials {
+    padding: 2rem;
+}
+
+.weather {
+    padding: 2rem;
+}
+
+.caption {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+main h3 {
+    margin-top: 1rem;
+}
+
+.gallery-rooms h2 {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.address {
+    text-align: center;
+}
+
+.Tarquay-today {
+    padding: 1rem;
+}
+
+footer {
+    font-size: .8rem;
+}
+
+/* NAVIGATION */
+
+nav ul, footer ul {
+    list-style-type: none;
+}
+
+nav ul, footer ul {
+    display: flex;
+}
+
+nav li, footer li {
+    padding: 0 1em;
+}
+
+nav a, footer a {
+    text-decoration: none;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+.toggle-button {
+    position: absolute;
+    top: 75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+
+}
+
+
+/* IMAGES */
+
+img {
+    width: 100%;
+    margin-top: .50em;
+    padding: .50em .50em .50em .50em;
+}
+
+#logo {
+    width: 20rem;
+    margin-top: 0em;
+}
+
+.hotel {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.attractions-gallery {
+    display: flex;
+}
+
+.hotel-gallery {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* footer */
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*media resposive design*/
+@media (max-width: 600px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+  
+    .navbar {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    aside {
+        grid-column: 1 / 3;
+
+    }
+
+    aside img {
+        width: 100%;
+    }
+
+    main {
+        grid-column: 1 / 3;
+        padding: 1em 2em 1em;
+    }
+}
+
